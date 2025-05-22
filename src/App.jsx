@@ -19,6 +19,7 @@ import ResolvedComplaint from "./organization/Resolved";
 import ComplaintPage from "./organization/Complaint";
 import LandingLayout from "./citizen/layout/Layout";
 import SubmitComplaint from "./citizen/Complaint";
+import LandingService from "./citizen/Service";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Routes>
           <Route path="" element={<LandingLayout />}>
             <Route index element={<LandingHome />} />
+            <Route path="service/:path" element={<LandingService />} />
             <Route path="*" element={<LandingHome />} />
           </Route>
           <Route path="/complaint" element={<SubmitComplaint />} />
