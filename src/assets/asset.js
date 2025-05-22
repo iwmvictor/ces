@@ -68,7 +68,6 @@ export const agencies = [
     id: "agency_03",
     name: "Adrite",
     username: "adrite",
-    password: "Agency123",
     email: "support@reg.rw",
     category: "Information technology",
     phone: "+250788987654",
@@ -136,7 +135,6 @@ export const citizens = [
   {
     id: "citizen_03",
     username: "citizen",
-    password: "Citizen123",
     name: "Jean Bosco Niyonsenga",
     email: "jbniyo@example.com",
     phone: "+250782345678",
@@ -251,7 +249,6 @@ export const userList = [
     id: "citizen_05",
     username: "admin",
     role: "admin",
-    password: "Admin123",
     name: "Administrator",
     email: "admin@ces.com",
     phone: "+250781234567",
@@ -262,7 +259,6 @@ export const userList = [
     username: "Iwmvictor",
     role: "admin",
     name: "Iwmvictor",
-    password: "Iwm123",
     email: "iwm@iwm.com",
     phone: "+250781234567",
     profileImage: user1,
@@ -290,7 +286,6 @@ export const userList = [
   {
     id: "citizen_03",
     username: "citizen",
-    password: "Citizen123",
     role: "citizen",
     name: "Jean Bosco Niyonsenga",
     email: "jbniyo@example.com",
@@ -340,7 +335,6 @@ export const userList = [
   {
     id: "agency_03",
     username: "agency",
-    password: "Agency123",
     role: "agency",
     name: "Meyvn Agency",
     email: "support@meyvn.rw",

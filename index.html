@@ -1,10 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character Encoding & Favicon -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg" />
+
+    <!-- Viewport & Theme Color -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CCES — Citizen Complaint & Engagement System</title>
+    <meta name="theme-color" content="#078FCE" />
+    <meta name="msapplication-TileColor" content="#078FCE" />
+
+    <!-- SEO Essentials -->
+    <title>CCES — Citizen Compliants & Engagement System</title>
+    <meta
+      name="description"
+      content="Citizen Engagement System (CES) is a civic tech platform that empowers citizens to report issues, track resolutions, and engage with agencies transparently. Built with React, Express, MongoDB, and JWT."
+    />
+    <link rel="canonical" href="https://ces-iwm.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="CCES — Built for a better citizen experience" />
+    <meta
+      property="og:description"
+      content="Empowering citizens and streamlining public service delivery. CES is the bridge between government agencies and the people."
+    />
+    <meta
+      property="og:image"
+      content="https://ces-iwm.vercel.app/og-image.jpg"
+    />
+    <meta property="og:url" content="https://ces-iwm.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Citizen Engagement System" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CES — Engage. Report. Resolve." />
+    <meta
+      name="twitter:description"
+      content="Report grievances and engage with government agencies in real time using CES."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ces-iwm.vercel.app/og-image.jpg"
+    />
+    <meta name="twitter:site" content="@cesplatform" />
+
+    <!-- Robots & Keywords -->
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="CES, civic tech, grievance redressal, citizen portal, public service, Rwanda digital governance"
+    />
+    <meta name="author" content="CES Team | @iwmvictor" />
+
+    <!-- Alternate Language Versions -->
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://ces-iwm.vercel.app/"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://ces-iwm.vercel.app/fr/"
+    />
+
+    <!-- Manifest & Apple Icons -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,8 +78,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    
   </head>
   <body>
     <div id="root"></div>
