@@ -1,0 +1,555 @@
+$primary-color: rgb(7, 143, 206);
+$light-color: rgb(255, 250, 244);
+$white-color: rgb(255, 255, 255);
+$text-color: rgb(3, 3, 3);
+
+$transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba($text-color, 0.2);
+}
+
+.toast-success {
+  background-color: green;
+  color: white;
+}
+
+.toast-error {
+  background-color: red;
+  color: white;
+}
+
+.auth {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  .container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+  }
+
+  // REGISTER
+  .register {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 3fr 5fr;
+
+    .brand {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      background: $light-color;
+
+      .brand__content {
+        width: 100%;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          transition: $transition;
+
+          img {
+            width: 100%;
+            max-width: 7rem;
+            object-fit: cover;
+            pointer-events: none;
+            transition: $transition;
+          }
+
+          &:hover {
+            img {
+              opacity: 0.7;
+              filter: grayscale(1);
+            }
+          }
+        }
+
+        .contacts__list {
+          width: 100%;
+          position: relative;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          .div {
+            gap: 1rem;
+            width: 100%;
+            display: flex;
+            cursor: pointer;
+            align-items: start;
+
+            .icon {
+              margin-top: 0.2rem;
+              position: relative;
+              width: 2.3rem;
+              height: 2.3rem;
+              font-size: 1.5rem;
+              display: flex;
+              user-select: none;
+              border-radius: 0.6rem;
+              align-items: center;
+              justify-content: center;
+              background: $white-color;
+              box-shadow: 0 0 1px 0 $text-color;
+            }
+
+            .text {
+              display: flex;
+              position: relative;
+              flex-direction: column;
+
+              h4 {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $text-color;
+              }
+
+              p {
+                font-size: 0.7rem;
+                color: $text-color;
+              }
+
+              a {
+                display: flex;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $primary-color;
+                transition: $transition;
+
+                &:hover {
+                  color: $text-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .register__content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 2rem 0;
+
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $text-color;
+        margin: 2rem 0;
+      }
+
+      form {
+        width: 100%;
+        position: relative;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+          width: 100%;
+          height: 3rem;
+          max-width: 420px;
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: $text-color;
+            border-radius: 0.3rem;
+            border: 0.1rem solid transparent;
+            box-shadow: 0 0 1px 0 rgba($text-color, 0.6);
+            transition: $transition;
+
+            &:active,
+            &:focus {
+              border-color: $primary-color;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.6);
+            }
+          }
+
+          button {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-weight: 500;
+            color: $white-color;
+            align-items: center;
+            border-radius: 0.4rem;
+            justify-content: center;
+            background: $primary-color;
+            transition: $transition;
+
+            &:hover {
+              border-radius: 1rem;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.6);
+            }
+          }
+        }
+      }
+
+      .other {
+        padding: 1rem 0;
+        position: relative;
+
+        p {
+          gap: 0.3rem;
+          display: flex;
+          align-items: center;
+          color: $text-color;
+
+          a {
+            position: relative;
+            color: $primary-color;
+            transition: $transition;
+
+            &::before {
+              content: "";
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0.1rem;
+              position: absolute;
+              transform: scaleX(0);
+              background: $text-color;
+              transform-origin: right;
+              transition: transform 0.6s ease-in-out;
+            }
+
+            &:hover {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+
+              color: $text-color;
+            }
+          }
+
+          @media (max-width: 350px) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 650px) {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .register__content {
+        width: 100%;
+      }
+
+      .brand {
+        position: relative;
+      }
+    }
+  }
+
+  // LOGIN
+  .login {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 3fr 5fr;
+
+    .brand {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      background: $light-color;
+
+      .brand__content {
+        width: 100%;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          transition: $transition;
+
+          img {
+            width: 100%;
+            max-width: 7rem;
+            object-fit: cover;
+            pointer-events: none;
+            transition: $transition;
+          }
+
+          &:hover {
+            img {
+              opacity: 0.7;
+              filter: grayscale(1);
+            }
+          }
+        }
+
+        .contacts__list {
+          width: 100%;
+          position: relative;
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          .div {
+            gap: 1rem;
+            width: 100%;
+            display: flex;
+            cursor: pointer;
+            align-items: start;
+
+            .icon {
+              margin-top: 0.2rem;
+              position: relative;
+              width: 2.3rem;
+              height: 2.3rem;
+              font-size: 1.5rem;
+              display: flex;
+              user-select: none;
+              border-radius: 0.6rem;
+              align-items: center;
+              justify-content: center;
+              background: $white-color;
+              box-shadow: 0 0 1px 0 $text-color;
+            }
+
+            .text {
+              display: flex;
+              position: relative;
+              flex-direction: column;
+
+              h4 {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: $text-color;
+              }
+
+              p {
+                font-size: 0.7rem;
+                color: $text-color;
+              }
+
+              a {
+                display: flex;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $primary-color;
+                transition: $transition;
+
+                &:hover {
+                  color: $text-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .login__content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 2rem 0;
+
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $text-color;
+        margin: 2rem 0;
+      }
+
+      form {
+        width: 100%;
+        position: relative;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .form-group {
+          width: 100%;
+          height: 3rem;
+          max-width: 420px;
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: $text-color;
+            border-radius: 0.3rem;
+            border: 0.1rem solid transparent;
+            box-shadow: 0 0 1px 0 rgba($text-color, 0.6);
+            transition: $transition;
+
+            &:active,
+            &:focus {
+              border-color: $primary-color;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.6);
+            }
+          }
+
+          button {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-weight: 500;
+            color: $white-color;
+            align-items: center;
+            border-radius: 0.4rem;
+            justify-content: center;
+            background: $primary-color;
+            transition: $transition;
+
+            &:hover {
+              border-radius: 1rem;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.6);
+            }
+          }
+        }
+
+        .forgot-password {
+          display: flex;
+          max-width: 420px;
+          position: relative;
+          justify-content: right;
+
+          a {
+            font-size: 0.8rem;
+            color: $primary-color;
+            position: relative;
+            transition: $transition;
+
+            &::before {
+              content: "";
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0.1rem;
+              position: absolute;
+              transform: scaleX(0);
+              background: $text-color;
+              transform-origin: right;
+              transition: transform 0.6s ease-in-out;
+            }
+
+            &:hover {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+
+              color: $text-color;
+            }
+          }
+        }
+      }
+
+      .other {
+        padding: 1rem 0;
+        position: relative;
+
+        p {
+          gap: 0.3rem;
+          display: flex;
+          align-items: center;
+          color: $text-color;
+
+          a {
+            position: relative;
+            color: $primary-color;
+            transition: $transition;
+
+            &::before {
+              content: "";
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0.1rem;
+              position: absolute;
+              transform: scaleX(0);
+              background: $text-color;
+              transform-origin: right;
+              transition: transform 0.6s ease-in-out;
+            }
+
+            &:hover {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+
+              color: $text-color;
+            }
+          }
+
+          @media (max-width: 350px) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 650px) {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .login__content {
+        width: 100%;
+      }
+
+      .brand {
+        position: relative;
+      }
+    }
+  }
+}

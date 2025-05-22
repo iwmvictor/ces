@@ -1,0 +1,53 @@
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+:root {
+  --primary-color: rgb(7, 143, 206);
+  --light-color: rgb(255, 250, 244);
+  --white-color: rgb(255, 255, 255);
+  --text-color: rgb(3, 3, 3);
+
+  --transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: auto !important;
+}
+
+button {
+  display: flex;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+span {
+  display: flex;
+  position: relative;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* reusable */
+.lcontainer {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
