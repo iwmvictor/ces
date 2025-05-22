@@ -27,17 +27,127 @@ import agency3 from "/images/user/a3.png";
 import userIcon from "/images/img/user.jpeg";
 import user from "/images/img/user.png";
 
+import { FaClipboardList, FaHandsHelping, FaCommentDots } from "react-icons/fa";
+
 export const assets = {
   images: {
     logo,
     user1,
     user,
+    hero1,
     placeholder: bg,
   },
   icons: {
     userIcon,
   },
 };
+
+export const services = [
+  {
+    title: "Complaint Submission & Resolution",
+    icon: FaClipboardList,
+    shortBio: "Easily report and track civic issues from anywhere.",
+    description: `
+      
+        <p>
+          Our platform enables citizens to lodge complaints on issues like infrastructure, safety, utilities, and more with ease and clarity.
+        </p>
+        <ul >
+          <li>Attach photos, videos, and locations to your complaint</li>
+          <li>Choose between <strong>public</strong> or <strong>private</strong> visibility</li>
+          <li>Track progress in real-time with status updates</li>
+          <li>Get notified when actions are taken or feedback is needed</li>
+        </ul>
+    `,
+  },
+  {
+    title: "Agency Coordination & Task Assignment",
+    icon: FaHandsHelping,
+    shortBio: "Empowering government agencies to serve efficiently.",
+    description: `
+      
+        <p>
+          Government agencies receive and manage complaints through role-based tools that streamline task distribution and resolution.
+        </p>
+        <ul >
+          <li>Supervisors assign complaints to internal responders</li>
+          <li>Responders handle only the tasks given to them</li>
+          <li>Auto-escalation for unresolved or delayed issues</li>
+          <li>SLA tracking and compliance analytics</li>
+        </ul>
+      
+    `,
+  },
+  {
+    title: "Community Feedback & Engagement",
+    icon: FaCommentDots,
+    shortBio: "Build trust through transparency and open communication.",
+    description: `
+     
+        <p>
+          Citizens can view, discuss, and rate publicly visible complaints and their outcomes to hold agencies accountable and support civic dialogue.
+        </p>
+        <ul >
+          <li>Rate and comment on resolved complaints</li>
+          <li>View complaint timelines with response history</li>
+          <li>Suggest improvements or voice concerns via feedback</li>
+          <li>Promote accountability by engaging with agencies</li>
+        </ul>
+     
+    `,
+  },
+];
+
+export const usecases = [
+  {
+    img: issue,
+    title: "Report Neighborhood Issues",
+    description:
+      "Citizens can report safety hazards, noise disturbances, illegal dumping, or other community concerns directly to responsible local authorities or agencies, ensuring quick and transparent resolution.",
+    cta: "Report an Issue",
+    url: "/report-case",
+  },
+  {
+    img: track,
+    title: "Track Complaint Progress",
+    description:
+      "Stay informed about the status of your complaints. From submission to resolution, the platform provides real-time updates, assigned responders, and notification alerts.",
+    cta: "View My Complaints",
+    url: "/citizen/complaints",
+  },
+  {
+    img: community,
+    title: "Community Engagement & Awareness",
+    description:
+      "Make your complaint public to create awareness and gather community support. Share responses, feedback, and solutions to help foster a more informed and active society.",
+    cta: "Explore Public Cases",
+    url: "/posts/complaints",
+  },
+  {
+    img: agency,
+    title: "Agency Case Management",
+    description:
+      "Agencies can manage complaints effectively, assign responders, track case lifecycles, and generate insights through a dedicated dashboard built for accountability and performance.",
+    cta: "Access Agency Panel",
+    url: "/auth/agency",
+  },
+  {
+    img: portal,
+    title: "Responder Portal for Field Agents",
+    description:
+      "Authorized responders can log in to view assigned complaints, provide updates, and close cases with supporting responses — streamlining field operations and citizen communication.",
+    cta: "Log in as Responder",
+    url: "/auth/agency",
+  },
+  {
+    img: feedback,
+    title: "Provide Feedback & Rate Services",
+    description:
+      "After resolution, citizens can give feedback and rate agency performance, helping improve service delivery and build transparency between the public and institutions.",
+    cta: "Leave Feedback",
+    url: "/posts/review",
+  },
+];
 
 export const agencies = [
   {

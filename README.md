@@ -2,12 +2,13 @@
 
 > A centralized, user-centric platform for citizens to submit complaints and engage with government agencies—streamlining feedback, boosting transparency, and improving response times.
 
-![CCES Screenshot](./preview.png) <!-- Optional: Replace with your actual image path -->
+![Hero Screenshot](./public/hero.png)
 
 ## Live Demo
 
 - 🌐 Frontend: [https://cesonline.vercel.app](https://cesonline.vercel.app)
 - ⚙️ Backend: [https://ces-be.onrender.com](https://ces-be.onrender.com/docs)
+- 📑 Backend Repo: [Backend Github Repo](https://github.com/iwmvictor/ces-be)
 - 📑 API Docs: [Swagger Documentation](https://ces-be.onrender.com/docs/)
 
 ---
@@ -18,19 +19,20 @@
 
 Developed with scalability and usability in mind, the system ensures fast and accessible citizen engagement with built-in authentication, AI-assisted routing, and email notifications.
 
+![Full Platform Screenshot](./public/full.png)
+
 ---
 
 ## Tech Stack
 
 | **Layer**     | **Technology**               |
 | --------      | ---------------------------- |
-| **Frontend**  | React JS (Vite)        |
+| **Frontend**  | React JS (Vite)              |
 | **Styling**   | SCSS                         |
 | **Backend**   | Node.js + Express.js         |
 | **Database**  | Supabase                     |
 | **Auth**      | JWT (with role-based access) |
 | **Docs**      | Swagger                      |
-
 
 ---
 
@@ -41,10 +43,16 @@ Developed with scalability and usability in mind, the system ensures fast and ac
 - **Categorization** – Complaints are categorized by type to ensure proper handling.
 - **Ticket Tracking** – Citizens can track the status of their submissions.
 - **Agency Dashboard** – Organizations can respond to complaints and manage their inbox.
-- **Authentication** – Secure login with role-based access for:
-- `Citizen` – Submits complaints
-- `Organization` – Handles incoming complaints
-- `Admin` – Manages users and settings
+- **Authentication** – Secure login with role-based access:
+  - `Citizen` – Submits complaints  
+    ![Register Page](./public/register.png)
+    ![Login Page](./public/login.png)
+  - `Organization` – Handles incoming complaints  
+    ![Organization Dashboard 1](./public/org1.png)  
+    ![Organization Dashboard 2](./public/org2.png)
+  - `Admin` – Manages users and settings  
+    ![Admin Panel 1](./public/admin1.png)  
+    ![Admin Panel 2](./public/admin2.png)
 - **Email Notifications** – Citizens receive updates via email.
 - **Mobile-Responsive** – Optimized for smartphones and tablets.
 

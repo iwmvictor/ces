@@ -17,13 +17,19 @@ import OrganizationHome from "./organization/Home";
 import UnresolvedComplaint from "./organization/Unresolved";
 import ResolvedComplaint from "./organization/Resolved";
 import ComplaintPage from "./organization/Complaint";
+import LandingLayout from "./citizen/layout/Layout";
+import SubmitComplaint from "./citizen/Complaint";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="" element={<LandingHome />} />
+          <Route path="" element={<LandingLayout />}>
+            <Route index element={<LandingHome />} />
+            <Route path="*" element={<LandingHome />} />
+          </Route>
+          <Route path="/complaint" element={<SubmitComplaint />} />
 
           <Route path="auth" element={<Login />} />
           <Route path="auth/login" element={<Login />} />

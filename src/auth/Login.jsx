@@ -84,7 +84,7 @@ const Login = () => {
             break;
           case "CITIZEN":
           default:
-            navigate("/");
+            navigate("/complaint");
             break;
         }
       } else {
